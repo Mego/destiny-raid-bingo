@@ -9,6 +9,13 @@ const App = () => {
   const [raid, setRaid] = useState<keyof typeof raids | "null">("null");
   const [renderBoard, setRenderBoard] = useState<boolean>(false);
 
+  let boardSeed = Array.from(seed)
+    .map((c) => c.charCodeAt(0).toString(16).toUpperCase())
+    .join("");
+  boardSeed = `${boardSeed}${
+    boardSeed.length % 4 !== 0 ? "00".repeat(4 - (boardSeed.length % 4)) : ""
+  }`;
+
   return (
     <div
       className="app"
@@ -59,12 +66,7 @@ const App = () => {
       </div>
       {renderBoard && raid !== "null" && (
         <div>
-          <Board
-            seed={Array.from(seed)
-              .map((c) => c.charCodeAt(0).toString(16).toUpperCase())
-              .join("")}
-            squares={raids[raid]}
-          />
+          <Board seed={boardSeed} squares={raids[raid]} />
         </div>
       )}
     </div>
