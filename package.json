@@ -1,6 +1,7 @@
 {
   "name": "bingo",
   "version": "0.1.0",
+  "homepage": "https://mego.github.io/destiny-raid-bingo",
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
