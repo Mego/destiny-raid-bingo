@@ -28,6 +28,7 @@ jobs:
       uses: actions/upload-artifact@v2.1.4
       with:
         path: docs/
+        name: docs
         if-no-files-found: error
   
   deploy:
@@ -38,10 +39,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: deploy
+      - name: Remove old build
+        run: rm -rf docs/
       - name: Download artifact
         uses: actions/download-artifact@v2.0.5
         with:
-          path: docs/
+          name: docs
       - name: Commit and push to gh-pages
         uses: github-actions-x/commit@v2.7
         with:
