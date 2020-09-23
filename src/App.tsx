@@ -13,7 +13,7 @@ const App = () => {
     .map((c) => c.charCodeAt(0).toString(16).toUpperCase())
     .join("");
   boardSeed = `${boardSeed}${
-    boardSeed.length % 4 !== 0 ? "00".repeat(4 - (boardSeed.length % 4)) : ""
+    boardSeed.length % 8 !== 0 ? "0".repeat(8 - (boardSeed.length % 8)) : ""
   }`;
 
   return (
