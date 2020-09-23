@@ -23,36 +23,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Build
       run: yarn && yarn build
-    
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2.1.4
+    - name: Deploy
+      uses: crazy-max/ghaction-github-pages@v2.1.2
       with:
-        path: docs/
-        name: docs
-        if-no-files-found: error
-  
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: deploy
-      - name: Remove old build
-        run: rm -rf docs/
-      - name: Download artifact
-        uses: actions/download-artifact@v2.0.5
-        with:
-          name: docs
-          path: .
-      - name: Commit and push to gh-pages
-        uses: github-actions-x/commit@v2.7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: 'gh-pages'
-          commit-message: 'publish'
-          files: docs/
-          name: Mego
-          email: Mego@users.noreply.github.com
+        build_dir: docs
     
