@@ -1,0 +1,53 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Build
+      run: yarn && yarn build
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2.1.4
+      with:
+        path: docs/
+        if-no-files-found: error
+  
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: deploy
+      - name: Download artifact
+        uses: actions/download-artifact@v2.0.5
+        with:
+          path: docs/
+      - name: Commit and push to gh-pages
+        uses: github-actions-x/commit@v2.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'gh-pages'
+          commit-message: 'publish'
+          files: docs/
+          name: Mego
+          email: Mego@users.noreply.github.com
+    
