@@ -52,5 +52,32 @@
         "Underbelly: death by falling off pipes",
         "Underbelly: fail to kill all watchers when trying to open a chest",
         "Underbelly: death by fan"
+    ],
+    "Garden of Salvation": [
+        "Big portal bamboozle",
+        "Too loud eye callouts",
+        "Dying with motes",
+        "No champ mods",
+        "Wrong person picking up motes",
+        "Tether orgy",
+        "Cyclops in the DPS phase",
+        "Forgot to go into the portal",
+        "Wrong person or wrong portal",
+        "Can't kill angelics",
+        "Motes run out",
+        "Troubles with jumping sections",
+        "Death to Vex Instantiation",
+        "Someone dies because of Voltaic Overflow",
+        "Consecrated Mind Telefrag",
+        "\"Pulling\" to an encounter",
+        "Someone left out of the final tethers at second encounter",
+        "\"Pushing\" shielded enemies",
+        "Both portals open at once",
+        "Someone dying to the pyramid",
+        "Attempting a tether with a non-locked relay",
+        "Dealing with the eyes from the middle",
+        "Locked out during Consecrated DPS",
+        "Depositing motes at the wrong relay",
+        "Gambit team has no void weapons"
     ]
 }
