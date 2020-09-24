@@ -25,5 +25,32 @@
         "QW: multiple people get pulled inside the heart at once",
         "QW: heart timer extended too early (> 10 seconds on timer)",
         "QW: someone dies to creeping darkness while going down elevator"
+    ],
+    "Leviathan": [
+        "Free: getting lost in underbelly",
+        "Castellum: colossi aggro'd",
+        "Castellum: flag order is guessed correctly",
+        "Castellum: flag reclaimed",
+        "Castellum: group does castellum 4x instead of underbelly",
+        "Dogs: alerting dogs with 0 stacks",
+        "Dogs: crystal holder alerting dogs",
+        "Dogs: 2-phase",
+        "Dogs: someone dies to beast handler",
+        "Baths: someone runs out of buff",
+        "Baths: a chain completely resets",
+        "Baths: 2-phase",
+        "Baths: accidental suicide during dps",
+        "Gauntlet: runner dies due to missed arrows",
+        "Gauntlet: someone dies to adds",
+        "Gauntlet: a psion is left alive",
+        "Gauntlet: wipe due to too few orbs after final round",
+        "Calus: someone dies by falling in a hole in shadow realm",
+        "Calus: wrong psion punched",
+        "Calus: fail to break shield in time",
+        "Calus: less than x50 for dps",
+        "Underbelly: death by watcher explosion",
+        "Underbelly: death by falling off pipes",
+        "Underbelly: fail to kill all watchers when trying to open a chest",
+        "Underbelly: death by fan"
     ]
 }
