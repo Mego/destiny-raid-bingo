@@ -18,16 +18,22 @@ type Props = {
 };
 
 const Board = ({ seed, squares }: Props) => {
-  const seedArray = new Int8Array(hexToBytes(seed));
-  const mt = MersenneTwister19937.seedWithArray(
-    new Int32Array(seedArray.buffer)
-  );
-  let shuffledSquares = shuffle(mt, squares.slice(1)); // first element is free space and should always be in the middle
-  shuffledSquares = [
-    ...shuffledSquares.slice(0, 12),
-    squares[0],
-    ...shuffledSquares.slice(12),
-  ];
+  let shuffledSquares: string[];
+
+  if (seed) {
+    const seedArray = new Int8Array(hexToBytes(seed));
+    const mt = MersenneTwister19937.seedWithArray(
+      new Int32Array(seedArray.buffer)
+    );
+    shuffledSquares = shuffle(mt, squares.slice(1)); // first element is free space and should always be in the middle
+    shuffledSquares = [
+      ...shuffledSquares.slice(0, 12),
+      squares[0],
+      ...shuffledSquares.slice(12),
+    ];
+  } else {
+    shuffledSquares = squares;
+  }
 
   const [finished, setFinished] = useState<Set<number>>(new Set<number>());
 
