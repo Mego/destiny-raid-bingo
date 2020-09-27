@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Build
-      run: yarn && yarn build
+      run: yarn install -D && yarn build
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v2.1.2
       with:
