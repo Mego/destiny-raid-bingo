@@ -1,6 +1,6 @@
 {
     "extends": ["react-app"],
-    "plugins": ["import"],
+    "plugins": ["import", "@typescript-eslint"],
     "rules": {
         // turn on errors for missing imports
         "import/no-unresolved": "error"
@@ -8,6 +8,12 @@
     "settings": {
         "import/parsers": {
             "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
         }
     }
 }
