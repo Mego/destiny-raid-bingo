@@ -27,26 +27,13 @@ const App = () => {
   });
 
   return (
-    <div
-      className="app"
-      style={{
-        flex: 1,
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
-      <div
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          alignItems: "space-evenly",
-        }}
-      >
+    <div className="app">
+      <div id="setup">
         <input
           onChange={(e) => setSeed(e.target.value)}
           placeholder="Enter seed (or leave blank for random)"
           value={seed}
-          style={{ width: "32rem" }}
+          id="seed"
         />
         <select
           id="raid-select"

@@ -13,8 +13,8 @@ enum Colors {
 
 const Square = ({ text, finished, toggleFinished }: Props) => {
   return (
-    <div
-      className="square"
+    <td
+      className="bingo-cell"
       onClick={() => toggleFinished()}
       style={{
         backgroundColor: finished ? Colors.GREEN : Colors.WHITE,
@@ -29,7 +29,7 @@ const Square = ({ text, finished, toggleFinished }: Props) => {
       >
         {text}
       </span>
-    </div>
+    </td>
   );
 };
 

@@ -48,16 +48,23 @@ const Board = ({ seed, squares }: Props) => {
   };
 
   return (
-    <div className="grid" style={{ flex: 1 }}>
-      {range(25).map((id) => (
-        <Square
-          text={shuffledSquares[id]}
-          finished={finished.has(id)}
-          toggleFinished={toggleFinishedMaker(id)}
-          key={id}
-        />
+    <table className="bingo">
+      {range(5).map((row) => (
+        <tr>
+          {range(5).map((col) => {
+            const id = row * 5 + col;
+            return (
+              <Square
+                text={shuffledSquares[id]}
+                finished={finished.has(id)}
+                toggleFinished={toggleFinishedMaker(id)}
+                key={id}
+              />
+            );
+          })}
+        </tr>
       ))}
-    </div>
+    </table>
   );
 };
 
