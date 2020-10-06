@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/destiny-raid-bingo/static/css/main.010f5595.chunk.css",
+    "main.js": "/destiny-raid-bingo/static/js/main.da615e27.chunk.js",
+    "main.js.map": "/destiny-raid-bingo/static/js/main.da615e27.chunk.js.map",
+    "runtime-main.js": "/destiny-raid-bingo/static/js/runtime-main.c3f46e01.js",
+    "runtime-main.js.map": "/destiny-raid-bingo/static/js/runtime-main.c3f46e01.js.map",
+    "static/js/2.02fa39cc.chunk.js": "/destiny-raid-bingo/static/js/2.02fa39cc.chunk.js",
+    "static/js/2.02fa39cc.chunk.js.map": "/destiny-raid-bingo/static/js/2.02fa39cc.chunk.js.map",
+    "index.html": "/destiny-raid-bingo/index.html",
+    "precache-manifest.1f6cdd127f0636d3c2ab8afd0e9907d3.js": "/destiny-raid-bingo/precache-manifest.1f6cdd127f0636d3c2ab8afd0e9907d3.js",
+    "service-worker.js": "/destiny-raid-bingo/service-worker.js",
+    "static/css/main.010f5595.chunk.css.map": "/destiny-raid-bingo/static/css/main.010f5595.chunk.css.map",
+    "static/js/2.02fa39cc.chunk.js.LICENSE.txt": "/destiny-raid-bingo/static/js/2.02fa39cc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3f46e01.js",
+    "static/js/2.02fa39cc.chunk.js",
+    "static/css/main.010f5595.chunk.css",
+    "static/js/main.da615e27.chunk.js"
+  ]
+}
